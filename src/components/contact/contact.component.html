@@ -1,0 +1,9 @@
+<p>contact works!</p>
+
+<form (ngSubmit)="submit()"
+    *ngIf="formGroup"
+    [formGroup]="formGroup">
+    <input type="email" formControlName="email">
+    <input type="password" formControlName="password">
+    <button type="submit" [disabled]="formGroup.invalid">Envoyer</button>
+</form>
